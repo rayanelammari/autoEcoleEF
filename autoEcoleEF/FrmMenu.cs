@@ -37,10 +37,7 @@ namespace autoEcoleEF
             f1.Show();
         }
 
-        private void FrmMenu_Load(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void listeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -48,7 +45,24 @@ namespace autoEcoleEF
             fl.MdiParent = this;
             fl.Show();
         }
+
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAjoutLecon fa = new FrmAjoutLecon(this.mesDonneesEF);
+            fa.MdiParent = this;
+            fa.Show();
+        }
+
+        private void validerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmValiderLecon fv = new FrmValiderLecon(this.mesDonneesEF);
+            fv.MdiParent = this;
+            fv.Show();
+        }
+
+     
     }
+    
 
 
 

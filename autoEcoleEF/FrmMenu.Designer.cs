@@ -56,7 +56,7 @@
             this.leçonToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,7 +66,7 @@
             this.quitterToolStripMenuItem,
             this.toolStripTextBox2});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(66, 26);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // quitterToolStripMenuItem
@@ -86,7 +86,7 @@
             this.elèveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gérerToolStripMenuItem});
             this.elèveToolStripMenuItem.Name = "elèveToolStripMenuItem";
-            this.elèveToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.elèveToolStripMenuItem.Size = new System.Drawing.Size(58, 26);
             this.elèveToolStripMenuItem.Text = "Elève";
             // 
             // gérerToolStripMenuItem
@@ -102,20 +102,20 @@
             this.gererVehicule,
             this.listeToolStripMenuItem});
             this.véhiculeToolStripMenuItem.Name = "véhiculeToolStripMenuItem";
-            this.véhiculeToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.véhiculeToolStripMenuItem.Size = new System.Drawing.Size(78, 26);
             this.véhiculeToolStripMenuItem.Text = "Véhicule";
             // 
             // gererVehicule
             // 
             this.gererVehicule.Name = "gererVehicule";
-            this.gererVehicule.Size = new System.Drawing.Size(224, 26);
+            this.gererVehicule.Size = new System.Drawing.Size(128, 26);
             this.gererVehicule.Text = "Gérer";
             this.gererVehicule.Click += new System.EventHandler(this.gererVehicule_Click);
             // 
             // listeToolStripMenuItem
             // 
             this.listeToolStripMenuItem.Name = "listeToolStripMenuItem";
-            this.listeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.listeToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.listeToolStripMenuItem.Text = "Liste";
             this.listeToolStripMenuItem.Click += new System.EventHandler(this.listeToolStripMenuItem_Click);
             // 
@@ -125,7 +125,7 @@
             this.ajouterToolStripMenuItem,
             this.validerToolStripMenuItem});
             this.leçonToolStripMenuItem.Name = "leçonToolStripMenuItem";
-            this.leçonToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
+            this.leçonToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
             this.leçonToolStripMenuItem.Text = "Leçon";
             // 
             // ajouterToolStripMenuItem
@@ -133,12 +133,14 @@
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
             this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // validerToolStripMenuItem
             // 
             this.validerToolStripMenuItem.Name = "validerToolStripMenuItem";
             this.validerToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
             this.validerToolStripMenuItem.Text = "Valider";
+            this.validerToolStripMenuItem.Click += new System.EventHandler(this.validerToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -156,7 +158,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMenu";
             this.Text = "Gestion des leçons de conduite";
-            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -69,6 +69,12 @@
     <Compile Include="FrmGererEleve.Designer.cs">
       <DependentUpon>FrmGererEleve.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAjoutLecon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjoutLecon.Designer.cs">
+      <DependentUpon>FrmAjoutLecon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGererVehicule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,12 @@
     </Compile>
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmValiderLecon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmValiderLecon.Designer.cs">
+      <DependentUpon>FrmValiderLecon.cs</DependentUpon>
     </Compile>
     <Compile Include="lecon.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -113,6 +125,9 @@
     <EmbeddedResource Include="FrmGererEleve.resx">
       <DependentUpon>FrmGererEleve.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAjoutLecon.resx">
+      <DependentUpon>FrmAjoutLecon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGererVehicule.resx">
       <DependentUpon>FrmGererVehicule.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmValiderLecon.resx">
+      <DependentUpon>FrmValiderLecon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,6 +169,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\eleve.datasource" />
+    <None Include="Properties\DataSources\lecon.datasource" />
     <None Include="Properties\DataSources\vehicule.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

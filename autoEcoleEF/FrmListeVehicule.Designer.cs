@@ -34,7 +34,7 @@
             this.numImmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modeleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.couleurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enEtatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enEtatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bdgVehicules = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVehciules)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgVehicules)).BeginInit();
@@ -98,6 +98,8 @@
             this.enEtatDataGridViewTextBoxColumn.HeaderText = "enEtat";
             this.enEtatDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.enEtatDataGridViewTextBoxColumn.Name = "enEtatDataGridViewTextBoxColumn";
+            this.enEtatDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.enEtatDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.enEtatDataGridViewTextBoxColumn.Width = 125;
             // 
             // bdgVehicules
@@ -112,7 +114,7 @@
             this.Controls.Add(this.enregistrer);
             this.Controls.Add(this.dataGridVehciules);
             this.Name = "FrmListeVehicule";
-            this.Text = "FrmListeVehicule";
+            this.Text = "Liste des véhicules";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVehciules)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgVehicules)).EndInit();
             this.ResumeLayout(false);
@@ -122,10 +124,10 @@
         #endregion
         private System.Windows.Forms.BindingSource bdgVehicules;
         private System.Windows.Forms.DataGridView dataGridVehciules;
+        private System.Windows.Forms.Button enregistrer;
         private System.Windows.Forms.DataGridViewTextBoxColumn numImmaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modeleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn couleurDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enEtatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button enregistrer;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn enEtatDataGridViewTextBoxColumn;
     }
 }

@@ -285,7 +285,7 @@
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.bdNav2);
             this.Name = "FrmGererVehicule";
-            this.Text = "FrmGererVehicule";
+            this.Text = "Gérer les véhciules";
             this.Load += new System.EventHandler(this.FrmGererVehicule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bdNav2)).EndInit();
             this.bdNav2.ResumeLayout(false);

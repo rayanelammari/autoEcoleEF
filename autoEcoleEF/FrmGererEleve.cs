@@ -39,10 +39,7 @@ namespace autoEcoleEF
             return n;
         }
 
-        //private void bdgNav_RefreshItems(object sender, EventArgs e)
-        //{
-        //    this.txtNumero.Text=this.getNumEleve().ToString();
-        //}
+       
         private eleve newEleve()
         {
             eleve newEleve = new eleve();

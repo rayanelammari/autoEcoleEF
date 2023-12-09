@@ -29,7 +29,6 @@ namespace autoEcoleEF
             this.txtCouleur.ReadOnly = false;
         }
 
-
         private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
         {
             if(txtNumero.Text=="" || txtModele.Text=="" || txtCouleur.Text=="")

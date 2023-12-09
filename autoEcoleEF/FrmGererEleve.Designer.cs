@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGererEleve));
             this.txtNumero = new System.Windows.Forms.TextBox();
+            this.bdgSourceEleve = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
@@ -55,10 +56,9 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.tsEnregistrer = new System.Windows.Forms.ToolStripButton();
-            this.bdgSourceEleve = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgNav)).BeginInit();
             this.bdgNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNumero
@@ -69,6 +69,10 @@
             this.txtNumero.ReadOnly = true;
             this.txtNumero.Size = new System.Drawing.Size(100, 22);
             this.txtNumero.TabIndex = 0;
+            // 
+            // bdgSourceEleve
+            // 
+            this.bdgSourceEleve.DataSource = typeof(autoEcoleEF.eleve);
             // 
             // label1
             // 
@@ -192,7 +196,7 @@
             this.bdgNav.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bdgNav.Name = "bdgNav";
             this.bdgNav.PositionItem = this.bindingNavigatorPositionItem;
-            this.bdgNav.Size = new System.Drawing.Size(800, 31);
+            this.bdgNav.Size = new System.Drawing.Size(800, 27);
             this.bdgNav.TabIndex = 14;
             this.bdgNav.Text = "bindingNavigator1";
             // 
@@ -203,14 +207,14 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Ajouter nouveau";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Nombre total d\'éléments";
             // 
@@ -221,7 +225,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Placer en premier";
             this.bindingNavigatorMoveFirstItem.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
             // 
@@ -232,14 +236,14 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Déplacer vers le haut";
             this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -254,7 +258,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -262,7 +266,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Déplacer vers le bas";
             // 
             // bindingNavigatorMoveLastItem
@@ -271,13 +275,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Placer en dernier";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -285,7 +289,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Supprimer";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
@@ -295,13 +299,9 @@
             this.tsEnregistrer.Image = ((System.Drawing.Image)(resources.GetObject("tsEnregistrer.Image")));
             this.tsEnregistrer.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEnregistrer.Name = "tsEnregistrer";
-            this.tsEnregistrer.Size = new System.Drawing.Size(29, 28);
+            this.tsEnregistrer.Size = new System.Drawing.Size(29, 24);
             this.tsEnregistrer.Text = "tsEnregistrer";
             this.tsEnregistrer.Click += new System.EventHandler(this.tsEnregistrer_Click);
-            // 
-            // bdgSourceEleve
-            // 
-            this.bdgSourceEleve.DataSource = typeof(autoEcoleEF.eleve);
             // 
             // FrmGererEleve
             // 
@@ -322,12 +322,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNumero);
             this.Name = "FrmGererEleve";
-            this.Text = "FrmGererEleve";
+            this.Text = "Gérer les élèves";
             this.Load += new System.EventHandler(this.FrmGererEleve_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgNav)).EndInit();
             this.bdgNav.ResumeLayout(false);
             this.bdgNav.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
