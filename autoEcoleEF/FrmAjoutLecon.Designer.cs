@@ -40,13 +40,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.rdButton2 = new System.Windows.Forms.RadioButton();
             this.btnEnregistrer = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bdgEleve)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 78);
+            this.label1.Location = new System.Drawing.Point(200, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 16);
             this.label1.TabIndex = 0;
@@ -58,7 +59,7 @@
             this.cmbEleve.DataSource = this.bdgEleve;
             this.cmbEleve.DisplayMember = "nom";
             this.cmbEleve.FormattingEnabled = true;
-            this.cmbEleve.Location = new System.Drawing.Point(150, 78);
+            this.cmbEleve.Location = new System.Drawing.Point(266, 100);
             this.cmbEleve.Name = "cmbEleve";
             this.cmbEleve.Size = new System.Drawing.Size(246, 24);
             this.cmbEleve.TabIndex = 1;
@@ -69,7 +70,7 @@
             // 
             // dtLecon
             // 
-            this.dtLecon.Location = new System.Drawing.Point(150, 130);
+            this.dtLecon.Location = new System.Drawing.Point(266, 152);
             this.dtLecon.Name = "dtLecon";
             this.dtLecon.Size = new System.Drawing.Size(264, 22);
             this.dtLecon.TabIndex = 2;
@@ -77,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 136);
+            this.label2.Location = new System.Drawing.Point(200, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 16);
             this.label2.TabIndex = 3;
@@ -86,7 +87,7 @@
             // cmbHeure
             // 
             this.cmbHeure.FormattingEnabled = true;
-            this.cmbHeure.Location = new System.Drawing.Point(150, 178);
+            this.cmbHeure.Location = new System.Drawing.Point(266, 200);
             this.cmbHeure.Name = "cmbHeure";
             this.cmbHeure.Size = new System.Drawing.Size(278, 24);
             this.cmbHeure.TabIndex = 5;
@@ -94,7 +95,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 178);
+            this.label3.Location = new System.Drawing.Point(200, 200);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 4;
@@ -103,7 +104,7 @@
             // rdButton1
             // 
             this.rdButton1.AutoSize = true;
-            this.rdButton1.Location = new System.Drawing.Point(150, 233);
+            this.rdButton1.Location = new System.Drawing.Point(266, 255);
             this.rdButton1.Name = "rdButton1";
             this.rdButton1.Size = new System.Drawing.Size(90, 20);
             this.rdButton1.TabIndex = 6;
@@ -114,7 +115,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(84, 233);
+            this.label4.Location = new System.Drawing.Point(200, 255);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 16);
             this.label4.TabIndex = 7;
@@ -123,7 +124,7 @@
             // rdButton2
             // 
             this.rdButton2.AutoSize = true;
-            this.rdButton2.Location = new System.Drawing.Point(293, 233);
+            this.rdButton2.Location = new System.Drawing.Point(409, 255);
             this.rdButton2.Name = "rdButton2";
             this.rdButton2.Size = new System.Drawing.Size(103, 20);
             this.rdButton2.TabIndex = 8;
@@ -133,19 +134,31 @@
             // 
             // btnEnregistrer
             // 
-            this.btnEnregistrer.Location = new System.Drawing.Point(150, 338);
+            this.btnEnregistrer.Location = new System.Drawing.Point(266, 347);
             this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(127, 23);
+            this.btnEnregistrer.Size = new System.Drawing.Size(205, 52);
             this.btnEnregistrer.TabIndex = 9;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = true;
             this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(287, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(200, 29);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Ajouter une leçon";
+            // 
             // FrmAjoutLecon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.rdButton2);
             this.Controls.Add(this.label4);
@@ -177,5 +190,6 @@
         private System.Windows.Forms.RadioButton rdButton2;
         private System.Windows.Forms.Button btnEnregistrer;
         private System.Windows.Forms.BindingSource bdgEleve;
+        private System.Windows.Forms.Label label5;
     }
 }

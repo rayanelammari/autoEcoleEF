@@ -26,5 +26,10 @@ namespace autoEcoleEF
             this.bdgSLecon.EndEdit();
             this.mesDonneesEF.SaveChanges();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

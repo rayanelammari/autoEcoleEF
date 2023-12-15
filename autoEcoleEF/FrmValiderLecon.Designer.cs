@@ -32,15 +32,15 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.numImmaVehiculeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.bdgSLecon = new System.Windows.Forms.BindingSource(this.components);
-            this.bdgSVheciule = new System.Windows.Forms.BindingSource(this.components);
+            this.numImmatricule = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEleveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.heureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dureeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.effectueeOuiNonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.numImmatricule = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bdgSLecon = new System.Windows.Forms.BindingSource(this.components);
+            this.bdgSVheciule = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgSLecon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgSVheciule)).BeginInit();
@@ -49,6 +49,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -59,18 +60,19 @@
             this.effectueeOuiNonDataGridViewTextBoxColumn,
             this.numImmatricule});
             this.dataGridView1.DataSource = this.bdgSLecon;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 68);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 35);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1067, 250);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnEnregistrer
             // 
-            this.btnEnregistrer.Location = new System.Drawing.Point(58, 324);
+            this.btnEnregistrer.Location = new System.Drawing.Point(404, 352);
             this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(168, 23);
+            this.btnEnregistrer.Size = new System.Drawing.Size(222, 55);
             this.btnEnregistrer.TabIndex = 1;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = true;
@@ -88,13 +90,15 @@
             this.numImmaVehiculeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.numImmaVehiculeDataGridViewTextBoxColumn.Width = 125;
             // 
-            // bdgSLecon
+            // numImmatricule
             // 
-            this.bdgSLecon.DataSource = typeof(autoEcoleEF.lecon);
-            // 
-            // bdgSVheciule
-            // 
-            this.bdgSVheciule.DataSource = typeof(autoEcoleEF.vehicule);
+            this.numImmatricule.DataPropertyName = "numImmaVehicule";
+            this.numImmatricule.DataSource = this.bdgSLecon;
+            this.numImmatricule.DisplayMember = "numImmaVehicule";
+            this.numImmatricule.HeaderText = "numImmaVehicule";
+            this.numImmatricule.MinimumWidth = 6;
+            this.numImmatricule.Name = "numImmatricule";
+            this.numImmatricule.Width = 125;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -151,26 +155,24 @@
             this.effectueeOuiNonDataGridViewTextBoxColumn.TrueValue = "1";
             this.effectueeOuiNonDataGridViewTextBoxColumn.Width = 125;
             // 
-            // numImmatricule
+            // bdgSLecon
             // 
-            this.numImmatricule.DataPropertyName = "numImmaVehicule";
-            this.numImmatricule.DataSource = this.bdgSLecon;
-            this.numImmatricule.DisplayMember = "numImmaVehicule";
-            this.numImmatricule.HeaderText = "numImmaVehicule";
-            this.numImmatricule.MinimumWidth = 6;
-            this.numImmatricule.Name = "numImmatricule";
-            this.numImmatricule.ReadOnly = true;
-            this.numImmatricule.Width = 125;
+            this.bdgSLecon.DataSource = typeof(autoEcoleEF.lecon);
+            // 
+            // bdgSVheciule
+            // 
+            this.bdgSVheciule.DataSource = typeof(autoEcoleEF.vehicule);
             // 
             // FrmValiderLecon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1150, 470);
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmValiderLecon";
-            this.Text = "FrmValiderLecon";
+            this.Text = "Valider une leçon";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgSLecon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgSVheciule)).EndInit();

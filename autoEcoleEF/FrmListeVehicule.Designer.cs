@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridVehciules = new System.Windows.Forms.DataGridView();
-            this.enregistrer = new System.Windows.Forms.Button();
             this.numImmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modeleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.couleurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enEtatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bdgVehicules = new System.Windows.Forms.BindingSource(this.components);
+            this.enregistrer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVehciules)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgVehicules)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +43,7 @@
             // dataGridVehciules
             // 
             this.dataGridVehciules.AutoGenerateColumns = false;
+            this.dataGridVehciules.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dataGridVehciules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridVehciules.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numImmaDataGridViewTextBoxColumn,
@@ -50,22 +51,12 @@
             this.couleurDataGridViewTextBoxColumn,
             this.enEtatDataGridViewTextBoxColumn});
             this.dataGridVehciules.DataSource = this.bdgVehicules;
-            this.dataGridVehciules.Location = new System.Drawing.Point(88, 46);
+            this.dataGridVehciules.Location = new System.Drawing.Point(43, 26);
             this.dataGridVehciules.Name = "dataGridVehciules";
             this.dataGridVehciules.RowHeadersWidth = 51;
             this.dataGridVehciules.RowTemplate.Height = 24;
-            this.dataGridVehciules.Size = new System.Drawing.Size(552, 258);
+            this.dataGridVehciules.Size = new System.Drawing.Size(659, 287);
             this.dataGridVehciules.TabIndex = 1;
-            // 
-            // enregistrer
-            // 
-            this.enregistrer.Location = new System.Drawing.Point(88, 339);
-            this.enregistrer.Name = "enregistrer";
-            this.enregistrer.Size = new System.Drawing.Size(128, 23);
-            this.enregistrer.TabIndex = 3;
-            this.enregistrer.Text = "Enregistrer";
-            this.enregistrer.UseVisualStyleBackColor = true;
-            this.enregistrer.Click += new System.EventHandler(this.enregistrer_Click);
             // 
             // numImmaDataGridViewTextBoxColumn
             // 
@@ -106,10 +97,21 @@
             // 
             this.bdgVehicules.DataSource = typeof(autoEcoleEF.vehicule);
             // 
+            // enregistrer
+            // 
+            this.enregistrer.Location = new System.Drawing.Point(257, 353);
+            this.enregistrer.Name = "enregistrer";
+            this.enregistrer.Size = new System.Drawing.Size(231, 51);
+            this.enregistrer.TabIndex = 3;
+            this.enregistrer.Text = "Enregistrer";
+            this.enregistrer.UseVisualStyleBackColor = true;
+            this.enregistrer.Click += new System.EventHandler(this.enregistrer_Click);
+            // 
             // FrmListeVehicule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.enregistrer);
             this.Controls.Add(this.dataGridVehciules);

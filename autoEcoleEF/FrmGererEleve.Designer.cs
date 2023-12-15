@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGererEleve));
             this.txtNumero = new System.Windows.Forms.TextBox();
-            this.bdgSourceEleve = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
@@ -56,28 +55,25 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.tsEnregistrer = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).BeginInit();
+            this.bdgSourceEleve = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bdgNav)).BeginInit();
             this.bdgNav.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNumero
             // 
             this.txtNumero.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceEleve, "id", true));
-            this.txtNumero.Location = new System.Drawing.Point(87, 64);
+            this.txtNumero.Location = new System.Drawing.Point(306, 85);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.ReadOnly = true;
             this.txtNumero.Size = new System.Drawing.Size(100, 22);
             this.txtNumero.TabIndex = 0;
             // 
-            // bdgSourceEleve
-            // 
-            this.bdgSourceEleve.DataSource = typeof(autoEcoleEF.eleve);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 64);
+            this.label1.Location = new System.Drawing.Point(243, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 1;
@@ -86,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 122);
+            this.label2.Location = new System.Drawing.Point(243, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 3;
@@ -95,7 +91,7 @@
             // txtNom
             // 
             this.txtNom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceEleve, "nom", true));
-            this.txtNom.Location = new System.Drawing.Point(87, 122);
+            this.txtNom.Location = new System.Drawing.Point(306, 143);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(100, 22);
             this.txtNom.TabIndex = 2;
@@ -103,7 +99,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 182);
+            this.label3.Location = new System.Drawing.Point(243, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 16);
             this.label3.TabIndex = 5;
@@ -112,7 +108,7 @@
             // txtPrenom
             // 
             this.txtPrenom.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceEleve, "prenom", true));
-            this.txtPrenom.Location = new System.Drawing.Point(87, 182);
+            this.txtPrenom.Location = new System.Drawing.Point(306, 203);
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(100, 22);
             this.txtPrenom.TabIndex = 4;
@@ -120,7 +116,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 233);
+            this.label4.Location = new System.Drawing.Point(243, 254);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 7;
@@ -129,7 +125,7 @@
             // txtAdresse
             // 
             this.txtAdresse.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceEleve, "adresse", true));
-            this.txtAdresse.Location = new System.Drawing.Point(87, 233);
+            this.txtAdresse.Location = new System.Drawing.Point(306, 254);
             this.txtAdresse.Name = "txtAdresse";
             this.txtAdresse.Size = new System.Drawing.Size(100, 22);
             this.txtAdresse.TabIndex = 6;
@@ -137,7 +133,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 286);
+            this.label5.Location = new System.Drawing.Point(243, 307);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 16);
             this.label5.TabIndex = 9;
@@ -146,7 +142,7 @@
             // dtInscription
             // 
             this.dtInscription.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdgSourceEleve, "dateInscription", true));
-            this.dtInscription.Location = new System.Drawing.Point(167, 286);
+            this.dtInscription.Location = new System.Drawing.Point(386, 307);
             this.dtInscription.Name = "dtInscription";
             this.dtInscription.Size = new System.Drawing.Size(256, 22);
             this.dtInscription.TabIndex = 10;
@@ -154,7 +150,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 352);
+            this.label6.Location = new System.Drawing.Point(243, 373);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 16);
             this.label6.TabIndex = 12;
@@ -164,7 +160,7 @@
             // 
             this.cmbCredit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdgSourceEleve, "creditHoraire", true));
             this.cmbCredit.FormattingEnabled = true;
-            this.cmbCredit.Location = new System.Drawing.Point(128, 349);
+            this.cmbCredit.Location = new System.Drawing.Point(347, 370);
             this.cmbCredit.Name = "cmbCredit";
             this.cmbCredit.Size = new System.Drawing.Size(152, 24);
             this.cmbCredit.TabIndex = 13;
@@ -172,6 +168,7 @@
             // bdgNav
             // 
             this.bdgNav.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bdgNav.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.bdgNav.BindingSource = this.bdgSourceEleve;
             this.bdgNav.CountItem = this.bindingNavigatorCountItem;
             this.bdgNav.DeleteItem = null;
@@ -303,10 +300,15 @@
             this.tsEnregistrer.Text = "tsEnregistrer";
             this.tsEnregistrer.Click += new System.EventHandler(this.tsEnregistrer_Click);
             // 
+            // bdgSourceEleve
+            // 
+            this.bdgSourceEleve.DataSource = typeof(autoEcoleEF.eleve);
+            // 
             // FrmGererEleve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bdgNav);
             this.Controls.Add(this.cmbCredit);
@@ -324,10 +326,10 @@
             this.Name = "FrmGererEleve";
             this.Text = "Gérer les élèves";
             this.Load += new System.EventHandler(this.FrmGererEleve_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgNav)).EndInit();
             this.bdgNav.ResumeLayout(false);
             this.bdgNav.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgSourceEleve)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
